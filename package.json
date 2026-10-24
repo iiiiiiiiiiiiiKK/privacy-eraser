@@ -1,0 +1,68 @@
+{
+  "name": "privacy-eraser",
+  "private": true,
+  "version": "1.0.0",
+  "type": "module",
+  "description": "Privacy Eraser �?inspect and strip image metadata (EXIF/GPS/XMP/ICC/IPTC) entirely in the browser. No uploads, no servers.",
+  "author": "KK (@0xkillcoin)",
+  "license": "MIT",
+  "homepage": "https://iiiiiiiiiiiiiKK.github.io/privacy-eraser/",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/iiiiiiiiiiiiiKK/privacy-eraser.git"
+  },
+  "bugs": {
+    "url": "https://github.com/iiiiiiiiiiiiiKK/privacy-eraser/issues"
+  },
+  "keywords": [
+    "exif",
+    "gps",
+    "metadata",
+    "privacy",
+    "image",
+    "strip-exif",
+    "jpeg",
+    "png",
+    "webp",
+    "browser"
+  ],
+  "scripts": {
+    "dev": "vite",
+    "build": "tsc -b && vite build",
+    "preview": "vite preview --port 4213 --strictPort",
+    "typecheck": "tsc -b",
+    "lint": "eslint . --max-warnings 0",
+    "test": "vitest run",
+    "test:watch": "vitest",
+    "e2e": "playwright test",
+    "e2e:install": "playwright install chromium",
+    "fixtures": "python scripts/make_fixtures.py",
+    "screenshots": "node scripts/screenshots.mjs","verify:live": "node scripts/verify-live.mjs",
+    "sync": "node scripts/sync-api.mjs",
+    "check": "npm run lint && npm run test && npm run build"
+  },
+  "dependencies": {
+    "exifr": "^7.1.3",
+    "fflate": "^0.8.2",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@eslint/js": "^9.18.0",
+    "@playwright/test": "^1.49.1",
+    "@testing-library/dom": "^10.4.0",
+    "@testing-library/react": "^16.1.0",
+    "@types/node": "^22.10.5",
+    "@types/react": "^18.3.18",
+    "@types/react-dom": "^18.3.5",
+    "@vitejs/plugin-react": "^4.3.4",
+    "eslint": "^9.18.0",
+    "eslint-plugin-react-hooks": "^5.1.0",
+    "globals": "^15.14.0",
+    "jsdom": "^25.0.1",
+    "typescript": "~5.7.2",
+    "typescript-eslint": "^8.20.0",
+    "vite": "^6.0.7",
+    "vitest": "^3.2.7"
+  }
+}
